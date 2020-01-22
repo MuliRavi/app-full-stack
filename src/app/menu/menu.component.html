@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a href="#" class="navbar-brand">Muli-t</a>
+        </div>
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardedcodedAuthenticationService.isUserLogedin()" routerLink="/welcome/ravi" class="nav-link">Home</a></li>
+            <li><a *ngIf="hardedcodedAuthenticationService.isUserLogedin()" routerLink="/todos" class="nav-link">Todos</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hardedcodedAuthenticationService.isUserLogedin()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="hardedcodedAuthenticationService.isUserLogedin()" routerLink="/logout" class="nav-link">Logout</a></li>
+
+
+        </ul>
+    </nav>
+</header>
